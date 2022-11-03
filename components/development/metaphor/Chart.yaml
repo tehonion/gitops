@@ -2,7 +2,7 @@ apiVersion: v2
 dependencies:
 - name: metaphor
   repository: https://chartmuseum.
-  version: 0.1.0
+  version: 0.0.1-rc.a8c2111
 description: metaphor instance
 name: metaphor-development
 type: application
