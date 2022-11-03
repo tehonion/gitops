@@ -1,19 +1,16 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: cert-manager
+  name: cert-manager-components
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "1"
+    argocd.argoproj.io/sync-wave: "10"
 spec:
   project: default
   source:
-    repoURL: https://charts.jetstack.io/
-    chart: cert-manager
-    targetRevision: 1.6.1
-    helm:
-      values: |-
-        installCRDs: true
+    repoURL: https://github.com/tehonion/gitops
+    path: components/cert-manager
+    targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
     namespace: cert-manager

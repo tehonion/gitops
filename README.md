@@ -13,15 +13,15 @@ The [kubefirst/nebulous](https://hub.docker.com/repository/docker/kubefirst/nebu
 
 | Application              | Namespace        | Description                                 | URL (where applicable)                              |
 |--------------------------|------------------|---------------------------------------------|-----------------------------------------------------|
-| GitLab                   | gitlab           | Privately Hosted GitLab Omnibus Server      | https://gitlab.<AWS_HOSTED_ZONE_NAME>               |
-| Vault                    | vault            | Secrets Management                          | https://vault.<AWS_HOSTED_ZONE_NAME>                |
-| Argo CD                  | argocd           | GitOps Continuous Delivery                  | https://argocd.<AWS_HOSTED_ZONE_NAME>               |
-| Argo Workflows           | argo             | Application Continuous Integration          | https://argo.<AWS_HOSTED_ZONE_NAME>                 |
-| Atlantis                 | atlantis         | Terraform Workflow Automation               | https://atlantis.<AWS_HOSTED_ZONE_NAME>             |
-| Chart Museum             | chartmuseum      | Helm Chart Registry                         | https://chartmuseum.<AWS_HOSTED_ZONE_NAME>          |
-| Metaphor Development     | development      | Development instance of sample application  | https://metaphor-development.<AWS_HOSTED_ZONE_NAME> |
-| Metaphor Staging         | staging          | Staging instance of sample application      | https://metaphor-staging.<AWS_HOSTED_ZONE_NAME>     |
-| Metaphor Production      | production       | Production instance of sample application   | https://metaphor-production.<AWS_HOSTED_ZONE_NAME>  |
+| GitLab                   | gitlab           | Privately Hosted GitLab Omnibus Server      | https://gitlab.               |
+| Vault                    | vault            | Secrets Management                          | https://vault.                |
+| Argo CD                  | argocd           | GitOps Continuous Delivery                  | https://argocd.               |
+| Argo Workflows           | argo             | Application Continuous Integration          | https://argo.                 |
+| Atlantis                 | atlantis         | Terraform Workflow Automation               | https://atlantis.             |
+| Chart Museum             | chartmuseum      | Helm Chart Registry                         | https://chartmuseum.          |
+| Metaphor Development     | development      | Development instance of sample application  | https://metaphor-development. |
+| Metaphor Staging         | staging          | Staging instance of sample application      | https://metaphor-staging.     |
+| Metaphor Production      | production       | Production instance of sample application   | https://metaphor-production.  |
 | Nginx Ingress Controller | ingress-nginx    | Ingress Controller                          |                                                     |
 | Cert Manager             | cert-manager     | Certificate Automation Utility              |                                                     |
 | Certificate Issuers      | clusterwide      | Let's Encrypt browser-trusted certificates  |                                                     |
@@ -32,7 +32,7 @@ The [kubefirst/nebulous](https://hub.docker.com/repository/docker/kubefirst/nebu
 
 The argocd configurations in this repo can be found in the [registry directory](./registry). The applications that you build and release on the kubefirst platform will also be registered here in the development, staging, and production folders. The `metaphor` app can be found there to serve as an example to follow.
 
-The `main` branch of this repo represents the desired state all apps registered with kubernetes. Argo CD will automatically try to converge your desired state with the actual state in kubernetes with a process called Argo Sync. You can see the Sync status of all of your apps in the [argo cd ui](https://argo.<AWS_HOSTED_ZONE_NAME>).
+The `main` branch of this repo represents the desired state all apps registered with kubernetes. Argo CD will automatically try to converge your desired state with the actual state in kubernetes with a process called Argo Sync. You can see the Sync status of all of your apps in the [argo cd ui](https://argo.).
 
 ## terraform infrastructure as code
 

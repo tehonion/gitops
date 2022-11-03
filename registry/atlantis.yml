@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: chartmuseum-components
+  name: atlantis-components
   namespace: argocd
   annotations:
     argocd.argoproj.io/sync-wave: "50"
@@ -9,11 +9,11 @@ spec:
   project: default
   source:
     repoURL: https://github.com/tehonion/gitops
-    path: components/chartmuseum
+    path: components/atlantis
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: chartmuseum
+    namespace: atlantis
   syncPolicy:
     automated:
       prune: true

@@ -1,19 +1,19 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: chartmuseum-components
+  name: argo-cwft-components
   namespace: argocd
   annotations:
-    argocd.argoproj.io/sync-wave: "50"
+    argocd.argoproj.io/sync-wave: "55"
 spec:
   project: default
   source:
     repoURL: https://github.com/tehonion/gitops
-    path: components/chartmuseum
+    path: components/argo-cwft
     targetRevision: HEAD
   destination:
     server: https://kubernetes.default.svc
-    namespace: chartmuseum
+    namespace: argo
   syncPolicy:
     automated:
       prune: true
