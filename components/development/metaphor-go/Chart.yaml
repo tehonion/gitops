@@ -2,7 +2,7 @@ apiVersion: v2
 dependencies:
 - name: metaphor-go
   repository: https://chartmuseum.
-  version: 0.1.0
+  version: 0.0.1-rc.f616e90
 description: metaphor go instance
 name: metaphor-go-development
 type: application
